@@ -1160,6 +1160,10 @@ impl PhysicalDeviceProperties {
         // Note that quite a few extensions depend on the `VK_KHR_get_physical_device_properties2` instance extension.
         // We enable `VK_KHR_get_physical_device_properties2` unconditionally (if available).
 
+        // Add OpenXR required extensions to device
+        extensions.push(khr::external_memory::NAME);
+        extensions.push(khr::external_memory_win32::NAME);
+
         // Require `VK_KHR_swapchain`
         extensions.push(khr::swapchain::NAME);
 
