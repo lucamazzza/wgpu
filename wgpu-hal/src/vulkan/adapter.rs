@@ -1161,6 +1161,8 @@ impl PhysicalDeviceProperties {
         // We enable `VK_KHR_get_physical_device_properties2` unconditionally (if available).
 
         // Add OpenXR required extensions to device
+        // TODO: Are there special conditions? Are these requested or just needed?
+        // Possibly to surround with some kind of check...
         extensions.push(khr::external_memory::NAME);
         extensions.push(khr::external_memory_win32::NAME);
 

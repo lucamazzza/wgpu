@@ -258,7 +258,6 @@ impl super::Instance {
         if cfg!(target_os = "windows") {
             // VK_KHR_win32_surface
             extensions.push(khr::win32_surface::NAME);
-            // XXX: Do i need to add them also here???? 
         }
         if cfg!(target_os = "macos") {
             // VK_EXT_metal_surface
