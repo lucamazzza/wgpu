@@ -238,6 +238,14 @@ impl super::Instance {
         // VK_KHR_surface
         extensions.push(khr::surface::NAME);
 
+        // OpenXR Extensions
+        extensions.push(khr::external_memory::NAME);
+        extensions.push(khr::external_memory_win32::NAME);
+        extensions.push(khr::external_semaphore::NAME);
+        extensions.push(khr::external_semaphore_win32::NAME);
+        extensions.push(khr::external_fence::NAME);
+        extensions.push(khr::external_fence_win32::NAME);
+
         // Platform-specific WSI extensions
         if cfg!(all(
             unix,

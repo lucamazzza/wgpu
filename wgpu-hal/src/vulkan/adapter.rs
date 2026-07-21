@@ -1165,6 +1165,10 @@ impl PhysicalDeviceProperties {
         // Possibly to surround with some kind of check...
         extensions.push(khr::external_memory::NAME);
         extensions.push(khr::external_memory_win32::NAME);
+        extensions.push(khr::external_semaphore::NAME);
+        extensions.push(khr::external_semaphore_win32::NAME);
+        extensions.push(khr::external_fence::NAME);
+        extensions.push(khr::external_fence_win32::NAME);
 
         // Require `VK_KHR_swapchain`
         extensions.push(khr::swapchain::NAME);
